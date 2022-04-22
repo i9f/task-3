@@ -1,0 +1,48 @@
+$text-blue:(#25253e);
+$text-white:rgba(#fff, 0);
+$text-gray:(#9b9b9b);
+$gray:(#fafafa);
+$blue:(#3139ce);
+$charcoal:rgba(72, 72, 72, 0%);
+$light-blue:(#6f75e5);
+$light-gray:(#e6e6e6);
+$smoke:(#f6f6f6);
+$white-smoke:(#f7f7f7);
+$pearl:(#a8a8aa);
+$chbox-gray:(#797979);
+$btn-gray:(#70707e);
+$btn-blue:(#d6d7f5);
+$btn-light-blue:(#545462);
+$form-light-gray:(#e1e1e4);
+$form-light-blue:(#515165);
+$form-black:(#1d1d1d);
+
+.hidden {
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+body,
+ul {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: $text-gray;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1310px;
+  padding: 0 15px;
+}
+
+.container-small {
+  margin: 0 auto;
+  max-width: 640px;
+  padding: 0 15px;
+}

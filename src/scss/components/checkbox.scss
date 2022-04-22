@@ -1,0 +1,55 @@
+.contacts {
+  &__chb-text {
+    display: inline-block;
+    position: relative;
+    top: -16px;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: $chbox-gray;
+    max-width: 423px;
+    margin-left: 39px;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: -39px;
+      transform: translate(0, -50%);
+      width: 24px;
+      height: 24px;
+      background: $smoke;
+      border: 1px solid $form-light-gray;
+      border-radius: 4px;
+    }
+
+    & a {
+      border-bottom: 1px solid $chbox-gray;
+    }
+  }
+
+  &__chb {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+
+    &:checked + &__chb-text::before {
+      border-color: $light-blue;
+      background-image: url("../image/contacts/form/chb-checked.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:not(:disabled) + &__chb-text:hover::before,
+    &:not(:disabled) + &__chb-text:focus::before {
+      border-color: $light-blue;
+    }
+
+    &:disabled + &__chb-text,
+    &:disabled + &__chb-text a {
+      color: $form-light-gray;
+      border-color: $form-light-gray;
+    }
+  }
+}

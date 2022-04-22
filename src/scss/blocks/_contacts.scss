@@ -1,0 +1,280 @@
+.contacts {
+  padding-top: 105px;
+
+  @media (max-width: 768px) {
+    padding: 50px 8px 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    color: $text-blue;
+    display: none;
+
+    @media (max-width: 1128px) {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: 1130px) {
+      justify-content: center;
+    }
+  }
+
+  &__authors {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 634px;
+    margin-top: auto;
+    margin-bottom: 20%;
+
+    @media (max-width: 1130px) {
+      margin-bottom: 25px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+
+  &__author {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+      margin-top: 11px;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  & .author-second {
+    flex-direction: column-reverse;
+  }
+
+  &__img img {
+    max-width: none;
+  }
+
+  &__img-first {
+    margin-right: 65px;
+    margin-bottom: 104px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 130px;
+    }
+  }
+
+  &__img-second {
+    margin-top: 104px;
+    margin-left: 64px;
+
+    @media (max-width: 768px) {
+      margin-top: 130px;
+    }
+  }
+
+  &__profile {
+    position: absolute;
+    z-index: -1;
+    background: $text-white;
+    box-shadow: 0 2.213px 6.0857px #38394d1a;
+    border-radius: 8px;
+
+    & span {
+      display: block;
+    }
+  }
+
+  &__profile-first {
+    top: 104px;
+    left: 64px;
+    padding: 132px 34px 32px;
+
+    @media (max-width: 768px) {
+      padding: 150px 47px 37px;
+    }
+  }
+
+  &__profile-second {
+    top: 0;
+    padding: 32px 34px 132px;
+
+    @media (max-width: 768px) {
+      padding: 37px 47px 150px;
+    }
+  }
+
+  &__autor-name {
+    font-size: 20px;
+    color: $text-blue;
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  &__author-job {
+    line-height: 140%;
+    margin-top: 7px;
+
+    @media (max-width: 768px) {
+      margin-top: 16px;
+      text-align: center;
+    }
+  }
+
+  &__first {
+    top: 165px;
+    left: 16px;
+
+    @media (max-width: 768px) {
+      top: 184px;
+      left: 16px;
+    }
+  }
+
+  &__second {
+    top: 269px;
+    right: 16px;
+
+    @media (max-width: 768px) {
+      display: block;
+      display: flex;
+      z-index: 1;
+      top: 314px;
+      left: 130px;
+    }
+  }
+
+  &__author-contact {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    background: opacify($charcoal, 0.502);
+    backdrop-filter: blur(4px);
+  }
+
+  &__telegram {
+    margin: 8px 7px 8px 17px;
+
+    &:hover path {
+      fill: $text-gray;
+    }
+
+    @media (max-width: 768px) {
+      margin: 10px 27px;
+
+      & svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+  &__email {
+    margin: 8px 17px 8px 7px;
+
+    &:hover path {
+      fill: $text-gray;
+    }
+
+    @media (max-width: 768px) {
+      margin: 10px 27px;
+
+      & svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+  &__form {
+    max-width: 480px;
+  }
+
+  &__form-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    color: $text-blue;
+
+    @media (max-width: 1128px) {
+      display: none;
+    }
+  }
+
+  &__text {
+    margin-top: 20px;
+    line-height: 140%;
+
+    @media (max-width: 1024px) {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    margin-top: 20px;
+  }
+
+  &__item:not(:nth-last-child(2)) {
+    margin-bottom: 24px;
+  }
+
+  &__label {
+    color: $text-gray;
+  }
+
+  .contacts__input {
+    margin-top: 10px;
+    min-width: 100%;
+    min-height: 44px;
+    padding-left: 16px;
+    font-size: 16px;
+    line-height: 120%;
+    background: $white-smoke;
+    border: 1px solid $form-light-gray;
+    border-radius: 4px;
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
+      border-color: $light-blue;
+      caret-color: $light-blue;
+    }
+
+    &:disabled + .contacts__label {
+      background: $form-light-gray;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
+  }
+
+  #msg {
+    font-family: "IBM Plex Sans", sans-serif;
+    resize: none;
+    min-height: 98px;
+    padding-top: 10px;
+    padding-right: 16px;
+  }
+}

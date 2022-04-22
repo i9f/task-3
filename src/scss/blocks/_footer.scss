@@ -1,0 +1,264 @@
+.footer {
+  background: $text-blue;
+
+  &__top {
+    padding-top: 82px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid opacify($text-white, 0.2);
+
+    @media (max-width: 768px) {
+      padding-top: 37px;
+      padding-bottom: 25px;
+    }
+  }
+
+  &__top-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 9%;
+
+    @media (max-width: 768px) {
+      text-align: center;
+      justify-content: center;
+      margin: 0;
+    }
+  }
+
+  &__support {
+    margin-top: 40px;
+    padding: 0 9%;
+
+    & span {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+      margin-top: 14px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    color: $light-gray;
+    margin-bottom: 13px;
+  }
+
+  &__write {
+    margin-top: 20px;
+
+    @media (max-width: 768px) {
+      margin-top: -10px;
+    }
+  }
+
+  &__follow {
+    @media (max-width: 768px) {
+      margin: 0 15px;
+    }
+  }
+
+  &__follow-icon img {
+    margin-right: 6px;
+  }
+
+  &__menu {
+    @media (max-width: 670px) {
+      & li {
+        padding-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      margin-top: 40px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    & li {
+      font-size: 14px;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    & li + li {
+      margin-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      justify-content: space-between;
+      margin: 0 20px;
+
+      & li + li {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: 414px) {
+      & {
+        padding: 0;
+      }
+
+      & li {
+        margin: 0;
+      }
+    }
+  }
+
+  &__link {
+    line-height: 22px;
+  }
+
+  &__select {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__write-text {
+    font-size: 16px;
+    line-height: 150%;
+    color: opacify($text-white, 1);
+    margin-bottom: 11px;
+  }
+
+  &__write-icon {
+    display: inline-block;
+
+    & a {
+      margin-right: 6px;
+    }
+  }
+
+  &__contacts {
+    display: inline-block;
+  }
+
+  &__contacts-text {
+    position: relative;
+    line-height: 150%;
+    align-items: center;
+    margin-left: 67px;
+    margin-bottom: 5px;
+
+    & img {
+      position: absolute;
+      left: -25px;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    @media (max-width: 768px) {
+      margin-left: 30px;
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+  }
+
+  &__bottom-content {
+    margin-top: 40px;
+    padding-bottom: 90px;
+
+    @media (max-width: 768px) {
+      margin-top: 22px;
+      padding-bottom: 16px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: $pearl;
+
+    @media (max-width: 768px) {
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__logo {
+    margin-top: 22px;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      & img {
+        max-width: 70px;
+        max-height: 24px;
+      }
+    }
+  }
+
+  &__copy {
+    font-size: 12px;
+    line-height: 22px;
+    color: $pearl;
+
+    & a {
+      color: opacify($text-white, 1);
+    }
+
+    @media (max-width: 768px) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      max-width: 236px;
+    }
+  }
+
+  &__mobile-menu {
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+
+  & .mobile-sup {
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  & .mobile-select {
+    margin-top: 30px;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  & .blog__author {
+    margin-top: 20px;
+    border: none;
+    margin-bottom: 5px;
+  }
+
+  & .blog__author-name {
+    font-size: 16px;
+    color: opacify($text-white, 1);
+  }
+
+  & .blog__author-job {
+    text-align: left;
+  }
+
+  & .number img {
+    left: 0;
+  }
+
+  & .container-small {
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+  }
+}

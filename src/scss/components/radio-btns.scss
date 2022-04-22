@@ -1,0 +1,64 @@
+.contacts__radio-list {
+  display: inline-block;
+
+  @media (max-width: 1100px) {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
+
+.contacts__radio {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.contacts__radio-text {
+  position: relative;
+  display: inline-block;
+  margin-left: 60px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: $form-black;
+
+  @media (max-width: 768px) {
+    margin-left: 34px;
+    margin-right: 30px;
+  }
+}
+
+.contacts__radio-text::before {
+  position: absolute;
+  top: 0;
+  left: -34px;
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid $blue;
+  border-radius: 50%;
+}
+
+.contacts__radio:disabled + .contacts__radio-text::before {
+  border-color: $form-light-gray;
+}
+
+.contacts__radio:checked + .contacts__radio-text::before {
+  background-image: url("../image/contacts/form/radio-checked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contacts__radio:checked:disabled + .contacts__radio-text::before {
+  border-color: $form-light-gray;
+  background-image: url("../image/contacts/form/radio-disabled.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contacts__radio:not(:checked):not(:disabled) + .contacts__radio-text:hover::before,
+.contacts__radio:not(:checked):not(:disabled) + .contacts__radio-text:focus::before {
+  background-image: url("../image/contacts/form/radio-focus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}

@@ -1,0 +1,130 @@
+a.btn,
+.btn {
+  font-size: 16px;
+  line-height: 120%;
+  text-align: center;
+  min-height: 41px;
+  min-width: 124px;
+  color: opacify($text-white, 1);
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  transition: background-color 0.7s linear;
+
+  &:disabled {
+    background: $btn-blue;
+    color: $light-blue;
+    border: 1px solid $btn-gray;
+  }
+
+  &:not(:disabled):focus,
+  &:not(:disabled):hover {
+    background: $light-blue;
+    color: opacify($text-white, 1);
+  }
+}
+
+.btn-wide {
+  text-align: center;
+  min-height: 41px;
+  min-width: 200px;
+  font-size: 18px;
+  line-height: 120%;
+  color: $blue;
+  background: $btn-blue;
+  border-radius: 4px;
+  border: none;
+  transition: background-color 0.7s linear;
+
+  &:not(:disabled):focus,
+  &:not(:disabled):hover {
+    color: opacify($text-white, 1);
+    background-color: $light-blue;
+  }
+}
+
+.header {
+  &__login-btn {
+    border: 1px solid opacify($text-white, 1);
+    margin-right: 15px;
+    background: transparent;
+
+    &:disabled {
+      background: transparent;
+      border-color: $btn-gray;
+      color: $btn-gray;
+    }
+
+    &:not(:disabled):focus {
+      background: $btn-blue;
+      border-color: $btn-blue;
+      color: $blue;
+    }
+  }
+
+  & .mobile-btn {
+    @media (max-width: 768px) {
+      min-width: 100px;
+      margin: 0;
+      border: none;
+      background-color: $blue;
+    }
+  }
+
+  &__signup-btn {
+    background-color: $blue;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.cryptocurrency {
+  &__btn {
+    min-width: 159px;
+    min-height: 37px;
+    border: 1px dashed $text-gray;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    color: $btn-light-blue;
+    background-color: transparent;
+    position: relative;
+  }
+
+  &__btn p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.blog__head-btn {
+  padding: 9px 49px;
+}
+
+.contacts {
+  &__form-btn {
+    margin-top: 15px;
+
+    @media (max-width: 768px) {
+      margin-left: auto;
+      margin-right: auto;
+      min-width: 244px;
+    }
+  }
+
+  &__mobile-btn {
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+}
+
+.buy__btn {
+  min-width: 229px;
+}

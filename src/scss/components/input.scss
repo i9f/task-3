@@ -1,0 +1,26 @@
+.contacts__input {
+  margin-top: 10px;
+  min-width: 100%;
+  min-height: 44px;
+  padding-left: 16px;
+  font-size: 16px;
+  line-height: 120%;
+  background: $white-smoke;
+  border: 1px solid $form-light-gray;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    border-color: $light-blue;
+    caret-color: $light-blue;
+  }
+
+  &:disabled + .contacts__label {
+    background: $form-light-gray;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,19 @@
+.contacts__select {
+  margin-top: 10px;
+  min-width: 235px;
+  height: 44px;
+  background: $white-smoke;
+  border: 1px solid $form-light-gray;
+  border-radius: 4px;
+
+  @media (max-width: 1100px) {
+    width: 100%;
+  }
+}
+
+.footer__select select {
+  min-width: 191px;
+  height: 38px;
+  background: $form-light-blue;
+  border-radius: 4px;
+}

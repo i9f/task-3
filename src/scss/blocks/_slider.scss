@@ -1,0 +1,112 @@
+.blog__slider-wrapper {
+  margin: 17px auto 0;
+
+  @media (min-width: 1025px) {
+    & {
+      display: none;
+    }
+  }
+}
+
+.blog__slide {
+  max-width: 340px;
+
+  @media (max-width: 450px) {
+    & .blog__other-img {
+      max-width: 292px;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  & .blog__author-icon {
+    max-height: 38px;
+    max-width: 38px;
+  }
+
+  & .blog__author {
+    border: none;
+    margin-top: 13px;
+
+    & img {
+      width: 38px;
+    }
+  }
+
+  & .blog__author-name {
+    font-size: 14px;
+  }
+
+  & .blog__author-job {
+    font-size: 12px;
+  }
+
+  & .blog__img-data {
+    font-size: 12px;
+    line-height: 130%;
+    color: transparentize($gray, 0.2);
+  }
+
+  & .blog__img-text {
+    font-size: 14px;
+    line-height: 18px;
+    color: opacify($text-white, 1);
+    padding: 12px;
+    text-align: left;
+    min-height: 10%;
+  }
+
+  & .blog__link {
+    display: flex;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 11px;
+    margin-bottom: 45px;
+    color: $blue;
+    background-color: transparent;
+
+    &:visited,
+    &:active {
+      color: $light-blue;
+      text-decoration: underline;
+
+      & path {
+        fill: $light-blue;
+      }
+    }
+
+    & svg {
+      margin-left: 14px;
+    }
+  }
+}
+
+.blog__slider {
+  position: relative;
+
+  & .slick-dots {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    & li {
+      margin-right: 4px;
+    }
+
+    & button {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: $light-gray;
+      color: transparent;
+      border: none;
+    }
+
+    & .slick-active button {
+      background: $blue;
+    }
+  }
+}
