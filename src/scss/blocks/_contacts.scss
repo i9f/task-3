@@ -5,16 +5,21 @@
     padding: 50px 8px 0;
   }
 
+  &__head {
+    display: grid;
+    grid-template-columns: 1fr 462px;
+
+    @media (max-width: 1125px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
   &__title {
     font-weight: 700;
     font-size: 40px;
     line-height: 52px;
+    grid-column-end: -1;
     color: $text-blue;
-    display: none;
-
-    @media (max-width: 1128px) {
-      display: block;
-    }
 
     @media (max-width: 768px) {
       font-size: 28px;
@@ -27,27 +32,28 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @media (max-width: 1130px) {
+    @media (max-width: 1125px) {
       justify-content: center;
     }
   }
 
   &__authors {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10%;
     max-width: 634px;
+    width: 100%;
     margin-top: auto;
     margin-bottom: 20%;
 
-    @media (max-width: 1130px) {
+    @media (max-width: 1125px) {
       margin-bottom: 25px;
       margin-top: 20px;
     }
 
     @media (max-width: 768px) {
-      justify-content: center;
+      grid-template-columns: 1fr;
+      max-width: 300px;
     }
   }
 
@@ -55,12 +61,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    min-height: 322px;
 
     @media (max-width: 768px) {
-      margin-top: 11px;
-
       &:not(:last-child) {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
       }
     }
   }
@@ -69,25 +74,25 @@
     flex-direction: column-reverse;
   }
 
-  &__img img {
-    max-width: none;
+  &__img {
+    position: relative;
   }
 
   &__img-first {
-    margin-right: 65px;
-    margin-bottom: 104px;
-
     @media (max-width: 768px) {
-      margin-bottom: 130px;
+      padding-bottom: 130px;
     }
   }
 
   &__img-second {
-    margin-top: 104px;
-    margin-left: 64px;
+    padding-left: 15%;
 
     @media (max-width: 768px) {
-      margin-top: 130px;
+      padding-top: 130px;
+    }
+
+    @media (max-width: 370px) {
+      padding-left: 10%;
     }
   }
 
@@ -104,12 +109,16 @@
   }
 
   &__profile-first {
-    top: 104px;
-    left: 64px;
+    bottom: 0;
+    left: 15%;
     padding: 132px 34px 32px;
 
     @media (max-width: 768px) {
       padding: 150px 47px 37px;
+    }
+
+    @media (max-width: 370px) {
+      left: 10%;
     }
   }
 
@@ -141,37 +150,29 @@
     }
   }
 
+  &__author-contact {
+    display: flex;
+    position: absolute;
+    bottom: 16px;
+    border-radius: 8px;
+    background: opacify($charcoal, 0.502);
+    backdrop-filter: blur(4px);
+  }
+
   &__first {
-    top: 165px;
     left: 16px;
 
     @media (max-width: 768px) {
-      top: 184px;
-      left: 16px;
+      bottom: calc(130px + 16px); //img padding + contact padding
     }
   }
 
   &__second {
-    top: 269px;
-    right: 16px;
+    right: 15%;
 
     @media (max-width: 768px) {
-      display: block;
-      display: flex;
-      z-index: 1;
-      top: 314px;
-      left: 130px;
+      right: 10%;
     }
-  }
-
-  &__author-contact {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    border-radius: 8px;
-    background: opacify($charcoal, 0.502);
-    backdrop-filter: blur(4px);
   }
 
   &__telegram {
@@ -212,17 +213,6 @@
     max-width: 480px;
   }
 
-  &__form-title {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 52px;
-    color: $text-blue;
-
-    @media (max-width: 1128px) {
-      display: none;
-    }
-  }
-
   &__text {
     margin-top: 20px;
     line-height: 140%;
@@ -241,33 +231,9 @@
   }
 
   &__label {
+    display: inline-block;
+    margin-bottom: 10px;
     color: $text-gray;
-  }
-
-  .contacts__input {
-    margin-top: 10px;
-    min-width: 100%;
-    min-height: 44px;
-    padding-left: 16px;
-    font-size: 16px;
-    line-height: 120%;
-    background: $white-smoke;
-    border: 1px solid $form-light-gray;
-    border-radius: 4px;
-
-    &:not(:disabled):hover,
-    &:not(:disabled):focus {
-      border-color: $light-blue;
-      caret-color: $light-blue;
-    }
-
-    &:disabled + .contacts__label {
-      background: $form-light-gray;
-    }
-
-    @media (max-width: 768px) {
-      font-size: 13px;
-    }
   }
 
   #msg {

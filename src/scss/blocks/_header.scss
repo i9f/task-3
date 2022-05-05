@@ -10,13 +10,11 @@
   }
 
   &__logo {
-    & img {
-      max-width: none;
+    max-width: none;
 
-      @media (max-width: 768px) {
-        max-width: 82px;
-        max-height: 28px;
-      }
+    @media (max-width: 768px) {
+      max-width: 82px;
+      max-height: 28px;
     }
   }
 

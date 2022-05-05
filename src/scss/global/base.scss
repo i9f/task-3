@@ -16,6 +16,7 @@ $btn-light-blue:(#545462);
 $form-light-gray:(#e1e1e4);
 $form-light-blue:(#515165);
 $form-black:(#1d1d1d);
+$select-highlighted:(#6C6C7A);
 
 .hidden {
   overflow: hidden;
@@ -43,6 +44,5 @@ ul {
 
 .container-small {
   margin: 0 auto;
-  max-width: 640px;
-  padding: 0 15px;
+  max-width: 610px;
 }

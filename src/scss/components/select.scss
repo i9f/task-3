@@ -1,19 +1,192 @@
-.contacts__select {
-  margin-top: 10px;
-  min-width: 235px;
-  height: 44px;
-  background: $white-smoke;
-  border: 1px solid $form-light-gray;
-  border-radius: 4px;
-
-  @media (max-width: 1100px) {
-    width: 100%;
-  }
-}
-
 .footer__select select {
   min-width: 191px;
   height: 38px;
   background: $form-light-blue;
   border-radius: 4px;
+}
+
+.select2-container--open .select2-dropdown--below {
+  border-top: 1px solid $form-light-gray !important; 
+  border-top-left-radius: 4px !important; 
+  border-top-right-radius: 4px !important; 
+}
+
+.select2-dropdown {
+  border-color: $form-light-gray !important;
+  margin-top: 5px;
+}
+
+//расположение стрелки
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 50% !important;
+  right: 10px !important;
+  transform: translate(0, -50%);
+}
+
+//нижнее скругление линии выбора
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single {
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+}
+
+//неактивный селект
+span.select2.select2-container.select2-container--default.select2-container--disabled {
+  & span {
+    color: $form-light-gray !important;
+  }
+  & img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+  }
+}
+
+//селект в секции contact us
+.contacts {
+  & .select2-container {
+    width: 235px !important;
+
+    @media (max-width: 768px) {
+      width: 100% !important;
+    }
+
+  }
+  & .select2-container--default .select2-selection--single {
+    min-width: 235px;
+    height: 44px;
+    background-color: $smoke !important;
+    border-color: $form-light-gray;
+
+    &:hover,
+    &:focus {
+      border-color: $light-blue;
+    }
+
+    & .select2-selection__rendered {
+      padding: 11px 0;
+      padding-left: 16px;
+      font-size: 16px;
+      line-height: 20px;
+      margin: auto 0;
+
+      & img {
+        padding-top: 3px;
+        padding-right: 5px;
+      }
+    }
+  }
+
+  & .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border: none;
+    height: 6px;
+    width: 10px;
+    background-image: url(../image/select/arrow-blue.svg);
+    transition: 0.5s;
+  }
+
+  & .select2-container--open .select2-selection--single .select2-selection__arrow b {
+    transform: rotate(180deg);
+    transform-origin: center center;
+  }
+}
+
+.form-select {
+  & ul {
+    color: $form-black;
+  }
+
+  & li {
+    padding: 6px 16px;
+    background-color: opacify($text-white, 1) !important;
+    padding-left: 16px;
+    font-size: 16px;
+    line-height: 20px;
+    margin: auto 0;
+
+    & img {
+      padding-top: 3px;
+      padding-right: 5px;
+    }
+
+    &:first-child {
+      padding-top: 11px;
+    }
+
+    &:last-child {
+      padding-bottom: 11px;
+    }
+  }
+
+  & .select2-results__option--highlighted[aria-selected] {
+    background-color: $smoke !important;
+    color: $form-black !important;
+  }
+}
+
+//селект в секции footer
+.footer {
+  & .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border: none;
+    height: 6px;
+    width: 10px;
+    background-image: url(../image/select/arrow-white.svg);
+    transition: 0.5s;
+  }
+
+  & .select2-container--open .select2-selection--single .select2-selection__arrow b {
+    transform: rotate(180deg);
+    transform-origin: center center;
+  }
+
+  & .select2-container {
+    width: 191px !important;
+  }
+
+  & .select2-container--default .select2-selection--single {
+    height: 44px;
+    background-color: $form-light-blue !important;
+    border-color: $form-light-blue;
+
+    &:hover,
+    &:focus {
+      border-color: $smoke;
+    }
+
+    & .select2-selection__rendered {
+      padding: 11px 0;
+      padding-left: 16px;
+      font-size: 16px;
+      line-height: 20px;
+      margin: auto 0;
+      color: opacify($text-white, 1);
+
+      & img {
+        padding-top: 3px;
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+.footer-select {
+  & .select2-results__option--highlighted[aria-selected] {
+    background-color: $select-highlighted !important;
+  }
+
+  & ul {
+    color: opacify($text-white, 1);
+  }
+
+  & li {
+    padding: 9px 16px;
+    background-color: $form-light-blue !important;
+    padding-left: 16px;
+    font-size: 16px;
+    line-height: 20px;
+    margin: auto 0;
+
+    & img {
+      padding-top: 4px;
+      padding-right: 5px;
+    }
+  }
 }
