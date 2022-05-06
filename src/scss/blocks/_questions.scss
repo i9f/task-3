@@ -26,6 +26,15 @@
   }
 
   &__wrapper {
+    // box-shadow: 0 4px 11px #38394d1a;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: 768px) {
+      &:not(:last-child) {
+        margin-bottom: 29px;
+      }
+    }
   }
 
   &__btn {
@@ -37,22 +46,14 @@
     line-height: 36px;
     color: $text-blue;
     background: opacify($text-white, 1);
-    transition: 1s ease-out;
+    transition: 0.4s ease-in-out;
     border-radius: 16px;
     box-shadow: 0 4px 11px #38394d1a;
-
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
 
     @media (max-width: 768px) {
       height: 76px;
       font-size: 18px;
       line-height: 23px;
-
-      &:not(:last-child) {
-        margin-bottom: 29px;
-      }
     }
   }
 
@@ -77,35 +78,25 @@
     align-items: center;
   }
 
-  &__btn .active {
-    // height: auto;
-    margin-bottom: 0 !important;
-    background: $gray;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
   &__open {
     background: url("../image/questions/btn.svg");
     background-repeat: no-repeat;
     width: 21px;
     height: 21px;
     margin: auto 0;
-    border: none;
-    outline: none;
+    transition: 0.4s ease-out;
   }
 
-  &__btn_opened &__open {
+  &__btn.active &__open {
     height: 3px;
     background-image: url("../image/questions/btn-opened.svg");
   }
 
   &__btn-droptext {
     max-height: 0;
+    padding: 0 40px;
     overflow: hidden;
-    // display: none;
-    // transition: max-height 1s ease-out;
-    transition: all 0.3s ease-out;
+    transition: 0.4s ease-in-out;
     line-height: 140%;
     color: $text-gray;
     background: $gray;
@@ -116,10 +107,24 @@
       padding: 0 16px;
       font-size: 14px;
     }
+  }
 
-    & .active {
-      max-height: auto;
-      padding: 1rem;
+  &__btn.active {
+    margin-bottom: 0 !important;
+    background: $gray;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none;
+  }
+
+  &__btn-droptext.active {
+    max-height: 100em;
+    padding-top: 16px;
+    padding-bottom: 40px;
+    transition: 0.4s ease-in-out;
+
+    @media (max-width: 768px) {
+      padding-bottom: 16px;
     }
   }
 }
