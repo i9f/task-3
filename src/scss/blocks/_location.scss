@@ -49,15 +49,18 @@
     position: relative;
     font-weight: 600;
     font-size: 20px;
+    cursor: pointer;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &.active {
       color: $text-blue;
 
       & path {
         fill: $blue;
       }
     }
+    
 
     @media (max-width: 768px) {
       font-size: 16px;

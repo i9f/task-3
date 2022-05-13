@@ -46,7 +46,7 @@
     line-height: 36px;
     color: $text-blue;
     background: opacify($text-white, 1);
-    transition: 0.4s ease-in-out;
+    transition: 0.4s linear;
     border-radius: 16px;
     box-shadow: 0 4px 11px #38394d1a;
 
@@ -96,7 +96,7 @@
     max-height: 0;
     padding: 0 40px;
     overflow: hidden;
-    transition: 0.4s ease-in-out;
+    transition: 0.4s linear;
     line-height: 140%;
     color: $text-gray;
     background: $gray;
@@ -119,9 +119,9 @@
 
   &__btn-droptext.active {
     max-height: 100em;
-    padding-top: 16px;
+    padding-top: 40px;
     padding-bottom: 40px;
-    transition: 0.4s ease-in-out;
+    transition: 0.4s linear;
 
     @media (max-width: 768px) {
       padding-bottom: 16px;

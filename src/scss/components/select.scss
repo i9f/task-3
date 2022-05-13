@@ -190,3 +190,9 @@ span.select2.select2-container.select2-container--default.select2-container--dis
     }
   }
 }
+.mobile-select {
+  & .select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding-right: 70px;
+    padding-left: 0;
+  }
+}
