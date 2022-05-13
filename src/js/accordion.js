@@ -9,7 +9,7 @@ export function accordion() {
         if (i == j) {
           btns[j].classList.toggle("active");
           drop_text[j].classList.toggle("active");
-          e.getElementsByClassName.maxHeight = e.scrollHeight + "px";
+          // e.getElementsByClassName.maxHeight = e.scrollHeight + "px";
         } else {
           btns[j].classList.remove("active");
           drop_text[j].classList.remove("active");
