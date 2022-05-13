@@ -6,7 +6,7 @@ const mobileNav = document.querySelector('.header__mobile-nav');
 export function mobile_menu() {
 	mobileNavButton.addEventListener('click', () => {
   	mobileNavIcon.classList.toggle('active');
-  	mobileNav.classList.toggle('active');
-  	document.body.classList.toggle('hidden');
+	  mobileNav.classList.toggle('active');
+    document.body.classList.toggle('hidden');
 	});
 }
